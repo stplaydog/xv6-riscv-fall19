@@ -119,6 +119,7 @@ mkfs/mkfs: mkfs/mkfs.c $K/fs.h
 
 UPROGS=\
 	$U/_cat\
+	$U/_copy\
 	$U/_echo\
 	$U/_forktest\
 	$U/_grep\
@@ -140,6 +141,12 @@ UPROGS=\
 	$U/_bcachetest\
 	$U/_mounttest\
 	$U/_crashtest\
+	$U/_sleep\
+	$U/_pingpong\
+	$U/_primes\
+	$U/_find\
+	$U/_xargs\
+
 
 fs.img: mkfs/mkfs README user/xargstest.sh $(UPROGS)
 	mkfs/mkfs fs.img README user/xargstest.sh $(UPROGS)
